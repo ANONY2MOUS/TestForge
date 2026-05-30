@@ -1,0 +1,30 @@
+{
+  "name": "testforge",
+  "version": "1.0.0",
+  "description": "Unified E2E and API Testing Platform targeting GitHub",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:chromium": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
+    "test:debug": "playwright test --debug",
+    "test:headed": "playwright test --headed",
+    "test:navigation": "playwright test e2e/tests/navigation.spec.ts",
+    "test:search": "playwright test e2e/tests/search.spec.ts",
+    "test:repository": "playwright test e2e/tests/repository.spec.ts",
+    "test:trending": "playwright test e2e/tests/trending.spec.ts",
+    "report": "playwright show-report",
+    "install:browsers": "playwright install --with-deps"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.45.0",
+    "@types/node": "^20.14.0",
+    "typescript": "^5.5.0",
+    "dotenv": "^16.4.5"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
